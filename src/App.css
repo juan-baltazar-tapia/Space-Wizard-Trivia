@@ -5,14 +5,39 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 3rem;
+}
+p{
+  font-size: 1.3rem;
+}
+
 .container {
+  display: flex;
+  justify-content: center;
+  color: black;
   margin: auto;
-  align-items: center;
   background-color: white;
   border-radius: 3%;
   margin-top: 40px;
   margin-bottom: 20px;
   width: 40rem;
   height: 20rem;
+
+}
+
+.child {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-weight: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+font-size: 1.7rem;
+font-weight: bold;
 }
 

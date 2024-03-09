@@ -1,25 +1,18 @@
 import React from "react";
 
 const Card = (props) => {
-    const isFrontFacing = props.isFrontFacing;
-    if (isFrontFacing) {
-        return (
-        <>
-            <div className="container" >
-                <h2>{props.front}</h2>
-                <p></p>
+  
+    return(<>
+        <div className="container" onClick={props.onClick}>
+            <div className="child">
+                <p className="text">
+                    {props.flipped ?  props.back : props.front}
+                </p>
             </div>
+            
+        </div>
         </>
-        )} 
-        return (
-        <>
-            <div className="container" >
-                <h2>{props.back}</h2>
-                <p></p>
-            </div>
-        </>
-        )
-        
+    )      
     }
 
 export default Card;
