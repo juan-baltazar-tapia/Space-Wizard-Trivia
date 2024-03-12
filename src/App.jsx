@@ -1,71 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
+import cardDictionary from './facts.json'
 
-const cardDictionary = [
-  {
-    "front": "What is the largest planet in our solar system?",
-    "back": "Jupiter"
-  },
-  {
-    "front": "How many planets are in our solar system?",
-    "back": "Eight"
-  },
-  {
-    "front": "What is the closest star to Earth?",
-    "back": "Sun"
-  },
-  {
-    "front": "What is the name of our galaxy?",
-    "back": "Milky Way"
-  },
-  {
-    "front": "What is the most abundant element in the universe?",
-    "back": "Hydrogen"
-  },
-  {
-    "front": "What is the process by which stars produce energy?",
-    "back": "Nuclear fusion"
-  },
-  {
-    "front": "What is the smallest planet in our solar system?",
-    "back": "Mercury"
-  },
-  {
-    "front": "What is the name of the force that holds planets in orbit?",
-    "back": "Gravity"
-  },
-  {
-    "front": "What is the term for a group of stars that form a recognizable pattern?",
-    "back": "Constellation"
-  },
-  {
-    "front": "What is the name of the planet known for its beautiful rings?",
-    "back": "Saturn"
-  },
-  {
-    "front": "What is the term for a massive explosion that marks the end of a star's life?",
-    "back": "Supernova"
-  },
-  {
-    "front": "What is the name of the asteroid belt located between Mars and Jupiter?",
-    "back": "Main Belt"
-  },
-  {
-    "front": "What is the term for the apparent change in position of a star due to Earth's orbit?",
-    "back": "Parallax"
-  },
-  {
-    "front": "What is the name of the largest moon of Saturn?",
-    "back": "Titan"
-  },
-  {
-    "front": "What is the term for a cloud of gas and dust where stars are born?",
-    "back": "Nebula"
+const mySet = new Set();
+const indices = []
+let currIndex = -1
+
+function getRandomNumber() {
+  let randomNumber = Math.floor(Math.random() * number) + 1;
+  // This will guarantee a new random number each time
+  while (mySet.has(randomNumber) && indices.length <= cardDictionary.length) {
+    randomNumber = Math.floor(Math.random() * number) + 1;
   }
-]
-function getRandomNumber(number = 2 ) {
-  return Math.floor(Math.random() * number) + 1;
+  return randomNumber
 }
 
 function App() {
@@ -77,10 +25,24 @@ function App() {
   }
 
   const handleNextClick = () => {
-    const randomIndex = Math.floor(Math.random() * cardDictionary.length);
-    setCurrentCard(randomIndex);
-    setFlipped(false);
+    currIndex++;
+    if (currIndex < indices.length) {
+      setCurrentCard(currIndex);
+      setFlipped(false);
+    } else {
+      const randomIndex = Math.floor(Math.random() * cardDictionary.length);
+      indices.push(randomIndex)
+      setCurrentCard(currIndex);
+      setFlipped(false);
+    }
   };
+
+  // TODO: edge case, currIndex = -1
+  const handleBackClick = () => {
+    currIndex--;
+    setCurrentCard(currIndex);
+    setFlipped(false);
+  }
  
   return (
     <>
@@ -90,6 +52,7 @@ function App() {
     
     <Card flipped={flipped} front={cardDictionary[currentCard].front} 
     back={cardDictionary[currentCard].back} onClick={toggleCard}/>
+    <button onClick={handleBackClick}>Back</button>
     <button onClick={handleNextClick}>Next</button>
     
     </>
