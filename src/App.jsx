@@ -4,47 +4,66 @@ import Card from './components/Card'
 
 const cardDictionary = [
   {
-    front: 'What is the Sun?',
-    back: 'The Sun is the center of our solar system and is about 93 million miles (149.6 million kilometers) from Earth.'
+    "front": "What is the largest planet in our solar system?",
+    "back": "Jupiter"
   },
   {
-    front: 'What is the Moon?',
-    back: 'The Moon is Earth\'s only natural satellite and is about 238,900 miles (384,400 kilometers) away.'
+    "front": "How many planets are in our solar system?",
+    "back": "Eight"
   },
   {
-    front: 'What is Mars?',
-    back: 'Mars is known as the "Red Planet" due to its reddish appearance and is home to the largest volcano and canyon in the solar system.'
+    "front": "What is the closest star to Earth?",
+    "back": "Sun"
   },
   {
-    front: 'What is Jupiter?',
-    back: 'Jupiter is the largest planet in our solar system and has more than 75 moons.'
+    "front": "What is the name of our galaxy?",
+    "back": "Milky Way"
   },
   {
-    front: 'What is Saturn?',
-    back: 'Saturn is known for its prominent ring system and has 62 confirmed moons, with an additional 20 awaiting confirmation.'
+    "front": "What is the most abundant element in the universe?",
+    "back": "Hydrogen"
   },
   {
-    front: 'What is Uranus?',
-    back: 'Uranus is an ice giant and is the only planet that rotates on its side, likely due to a collision with another celestial body.'
+    "front": "What is the process by which stars produce energy?",
+    "back": "Nuclear fusion"
   },
   {
-    front: 'What is Neptune?',
-    back: 'Neptune is the windiest planet in our solar system, with wind speeds reaching up to 1,500 miles per hour (2,400 kilometers per hour).'
+    "front": "What is the smallest planet in our solar system?",
+    "back": "Mercury"
   },
   {
-    front: 'What is Pluto?',
-    back: 'Pluto was once considered the ninth planet but was reclassified as a dwarf planet in 2006 by the International Astronomical Union (IAU).'
+    "front": "What is the name of the force that holds planets in orbit?",
+    "back": "Gravity"
   },
   {
-    front: 'What are asteroids?',
-    back: 'Asteroids are rocky objects that orbit the Sun, and the asteroid belt is located between Mars and Jupiter.'
+    "front": "What is the term for a group of stars that form a recognizable pattern?",
+    "back": "Constellation"
   },
   {
-    front: 'What are comets?',
-    back: 'Comets are icy objects that release gas and dust as they approach the Sun, creating a visible atmosphere and tail.'
+    "front": "What is the name of the planet known for its beautiful rings?",
+    "back": "Saturn"
+  },
+  {
+    "front": "What is the term for a massive explosion that marks the end of a star's life?",
+    "back": "Supernova"
+  },
+  {
+    "front": "What is the name of the asteroid belt located between Mars and Jupiter?",
+    "back": "Main Belt"
+  },
+  {
+    "front": "What is the term for the apparent change in position of a star due to Earth's orbit?",
+    "back": "Parallax"
+  },
+  {
+    "front": "What is the name of the largest moon of Saturn?",
+    "back": "Titan"
+  },
+  {
+    "front": "What is the term for a cloud of gas and dust where stars are born?",
+    "back": "Nebula"
   }
-];
-
+]
 function getRandomNumber(number = 2 ) {
   return Math.floor(Math.random() * number) + 1;
 }
