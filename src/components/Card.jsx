@@ -8,6 +8,7 @@ const Card = (props) => {
                 <p className="text">
                     {props.flipped ?  props.back : props.front}
                 </p>
+        
             </div>
             
         </div>

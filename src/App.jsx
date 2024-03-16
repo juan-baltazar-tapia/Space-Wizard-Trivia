@@ -3,45 +3,51 @@ import './App.css'
 import Card from './components/Card'
 import cardDictionary from './facts.json'
 
-const mySet = new Set();
-const indices = []
-let currIndex = -1
-
-function getRandomNumber() {
-  let randomNumber = Math.floor(Math.random() * number) + 1;
-  // This will guarantee a new random number each time
-  while (mySet.has(randomNumber) && indices.length <= cardDictionary.length) {
-    randomNumber = Math.floor(Math.random() * number) + 1;
-  }
-  return randomNumber
-}
-
 function App() {
   const [currentCard, setCurrentCard] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [input, setInput] = useState('');
+  const [mySet] = useState(new Set());
+  const [indices, setIndices] = useState([]);
+  const [currIndex, setCurrIndex] = useState(0);
 
   const toggleCard = () => {
     setFlipped(!flipped);
   }
 
   const handleNextClick = () => {
-    currIndex++;
-    if (currIndex < indices.length) {
-      setCurrentCard(currIndex);
+    setCurrIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % cardDictionary.length;
+      setCurrentCard(newIndex);
       setFlipped(false);
-    } else {
-      const randomIndex = Math.floor(Math.random() * cardDictionary.length);
-      indices.push(randomIndex)
-      setCurrentCard(currIndex);
-      setFlipped(false);
-    }
+      return newIndex;
+  })
+    setInput('');
   };
 
-  // TODO: edge case, currIndex = -1
   const handleBackClick = () => {
-    currIndex--;
-    setCurrentCard(currIndex);
-    setFlipped(false);
+    setCurrIndex((prevIndex => {
+      const newIndex = prevIndex - 1;
+      if (newIndex >= 0) {
+        setCurrentCard(newIndex);
+        setFlipped(false);
+      }
+      return newIndex;
+    }))};
+
+  const handleCheckAnswerClick = () => {
+    const currAnswer = input;
+    const correctAnswer = cardDictionary[currIndex].back;
+
+    if (currAnswer !== correctAnswer) {
+      alert('Not the correct answer.');
+    } else {
+      alert('Correct!')
+    }
+  }
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
   }
  
   return (
@@ -52,9 +58,19 @@ function App() {
     
     <Card flipped={flipped} front={cardDictionary[currentCard].front} 
     back={cardDictionary[currentCard].back} onClick={toggleCard}/>
+    <div className="answer-space" >
+    <input
+      type="text"
+      name='answerInput'
+      value={input}
+      placeholder="Insert answer here..."
+      onChange={handleChange}
+      className = "textbox"
+      />
+    </div>
     <button onClick={handleBackClick}>Back</button>
     <button onClick={handleNextClick}>Next</button>
-    
+    <button onClick={handleCheckAnswerClick}>Check Answer</button>
     </>
   )
 }
