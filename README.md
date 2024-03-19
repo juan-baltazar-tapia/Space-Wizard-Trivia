@@ -1,8 +1,8 @@
-# Web Development Project 2 - Space Trive
+# Web Development Project 3 - Universe Trivia
 
 Submitted by: Juan Baltazar Tapia
 
-This web app: Is a note card app that tests your knowledge of the solar system.
+This web app: With this flip card app, you can test your knowledge of the universe by typing in the info!
 
 Time spent: 5 hours spent in total
 
@@ -10,17 +10,17 @@ Time spent: 5 hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [X] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [X] **A list of card pairs is created**
-- [X] **Clicking on the card shows the corresponding component of the information pair**
-- [X] **Clicking the next button displays a random new card**
+- [X] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [ ] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,18 +28,16 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2ZyY2l2Yjg3dnc5ajY1dzN2YzY2YmVxZjkwZ3ZjN2tmNWYxZDMwaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n1mtJtWIhz2i88yqkB/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW56bjZwdDBjNDA2emM3MWZqaHlnamxycTZ6aWM4ZjFucXIxc216MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cHjjyA80rcTyJTVMkc/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ...  
-
 [Kap](https://getkap.co/) for macOS
-
 
 ## Notes
 
-I had some trouble incorporating the random number generator when clicking on the card componenet. After trial and error I figured you could put the random number generator, setCurrentCard and setFlipped all into one function simplifying the process.
+Describe any challenges encountered while building the app.
 
 ## License
 
