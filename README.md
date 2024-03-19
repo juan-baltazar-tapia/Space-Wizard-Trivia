@@ -1,43 +1,31 @@
-# Web Development Project 3 - Universe Trivia
-
-Submitted by: Juan Baltazar Tapia
+# Web Development Project 3 - Space Wizard Trivia
 
 This web app: With this flip card app, you can test your knowledge of the universe by typing in the info!
 
-Time spent: 5 hours spent in total
+Time spent: 6 hours spent in total
 
-## Required Features
-
-The following **required** functionality is completed:
+The following functionality is completed:
 
 - [X] **The user can enter their guess in a box before seeing the flipside of the card**
 - [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
 - [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
 - [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
-The following **optional** features are implemented:
+The following features will be implemented in the near future.
 
 - [ ] A shuffle button is used to randomize the order of the cards
 - [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
 - [ ] A counter displays the user's current and longest streak of correct responses
 - [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of this flip card app.
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW56bjZwdDBjNDA2emM3MWZqaHlnamxycTZ6aWM4ZjFucXIxc216MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cHjjyA80rcTyJTVMkc/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3BtNDEyeXFqenMwYnM3MTkzN2F1dzhrc3Bhemx0dGNsa2ZiMG0xNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YIeWqrym0NLsbjMgiU/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ...  
 [Kap](https://getkap.co/) for macOS
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
