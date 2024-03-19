@@ -52,8 +52,8 @@ function App() {
  
   return (
     <>
-    <h1>How well do you know the universe?</h1>
-    <p>How much of the universe do you truly know of? Test your knowledge with this deck of cards</p>
+    <h1>Space Wizard Flip Card App</h1>
+    <p>Are you a space wizard ready to take over the universe? Test your knowlege with this flipcard app!</p>
     <p>Number of cards: {cardDictionary.length}</p>
     
     <Card flipped={flipped} front={cardDictionary[currentCard].front} 
